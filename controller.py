@@ -11,7 +11,7 @@ def user(name):
 
 @app.route("/admin")
 def admin():  
-     return "https://github.com/"
+     return '<a href="https://github.com/">Gå till GitHub</a>'
 
 if __name__ == "__main__":
     app.run()
