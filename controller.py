@@ -9,5 +9,9 @@ def home():
 def user(name):  
      return f"Hello, {name}"
 
+@app.route("/admin")
+def admin():  
+     return "https://github.com/"
+
 if __name__ == "__main__":
     app.run()
