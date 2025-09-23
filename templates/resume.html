@@ -48,12 +48,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('resume') }}" class="active" >Resume</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

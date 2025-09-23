@@ -2,23 +2,24 @@ from flask import Flask, url_for, render_template
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/home")
 def home():
     return render_template("index.html")
 
-@app.route("/about.html")
+@app.route("/about")
 def about():
     return render_template("about.html")
 
-@app.route("/resume.html")
+@app.route("/resume")
 def resume():
     return render_template("resume.html")
 
 
-@app.route("/services.html")
+@app.route("/services")
 def services():
     return render_template("services.html")
 
-@app.route("/portfolio.html")
+@app.route("/portfolio")
 def portfolio():
     return render_template("portfolio.html")
 
@@ -27,7 +28,7 @@ def portfolio_details(project_id):
     # Här kan du t.ex. hämta information om projektet med project_id
     return render_template("portfolio-details.html", project_id=project_id)
 
-@app.route("/contact.html")
+@app.route("/contact")
 def contact():
     return render_template("contact.html")
 
