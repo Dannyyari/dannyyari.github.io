@@ -24,7 +24,7 @@ def portfolio():
 
 @app.route("/portfolio/<int:project_id>")
 def portfolio_details(project_id):
-    # Navigera så att ett specifikt projekt visas baserat på project_id
+    # Här kan du t.ex. hämta information om projektet med project_id
     return render_template("portfolio-details.html", project_id=project_id)
 
 @app.route("/contact.html")
