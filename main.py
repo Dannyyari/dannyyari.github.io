@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, request, jsonify
 app = Flask(__name__)
 
 @app.route("/")
@@ -31,6 +31,14 @@ def portfolio_details(project_id):
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route("/api/contact", methods=["POST"])
+def contact_api():
+    data = request.get_json()
+    print ("Data received:", data)
+    return jsonify({"status": "success", "message": "Contact form submitted successfully!"})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
