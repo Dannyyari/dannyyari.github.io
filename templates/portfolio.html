@@ -76,7 +76,9 @@
             <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('resume') }}">Resume</a></li>
             <li><a href="{{ url_for('services') }}">Services</a></li>
-            <li><a href="{{ url_for('portfolio') }}" class="active" >Portfolio</a></li>
+            <li>
+              <a href="{{ url_for('portfolio') }}" class="active">Portfolio</a>
+            </li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -112,7 +114,6 @@
             data-layout="masonry"
             data-sort="original-order"
           >
-            <!-- End Portfolio Filters -->
             <div
               class="row gy-4 isotope-container"
               data-aos="fade-up"
