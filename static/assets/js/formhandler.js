@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (result.ok) {
-          alert("Meddelandet skickat till backend!");
+          alert("Message sent to backend, thanks!");
           form.reset();
         } else {
-          alert("Något gick fel. Försök igen.");
+          alert("Something went wrong, please try again.");
         }
       } catch (err) {
         console.error(err);
-        alert("Kunde inte nå servern.");
+        alert("Could not connect to server");
       }
     });
   }
