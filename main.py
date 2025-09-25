@@ -1,5 +1,7 @@
 from flask import Flask, url_for, render_template, request, jsonify
-app = Flask(__name__)
+app = Flask(__name__, static_folder="frontend/static",      # <-- pekar på din static
+    template_folder="frontend/templates"  # <-- pekar på dina templates
+    )
 
 @app.route("/")
 @app.route("/home")
