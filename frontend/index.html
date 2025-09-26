@@ -8,53 +8,8 @@
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link
-      href="{{ url_for('static', filename='assets/img/favicon.png') }}"
-      rel="icon"
-    />
-    <link
-      href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}"
-      rel="apple-touch-icon"
-    />
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link
-      href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}"
-      rel="stylesheet"
-    />
-
-    <!-- Main CSS File -->
-    <link
-      href="{{ url_for('static', filename='assets/css/main.css') }}"
-      rel="stylesheet"
-    />
-      <!-- Favicons -->
-    <link href="../static/assets/img/favicon.png" rel="icon" />
-    <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/frontend/static/assets/img/favicon.png" rel="icon" />
+    <link href="/frontend/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -65,14 +20,14 @@
     />
 
     <!-- Vendor CSS Files -->
-    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-
+    <link href="/frontend/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/frontend/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/frontend/static/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="/frontend/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/frontend/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+      
     <!-- Main CSS File -->
-    <link href="../static/assets/css/main.css" rel="stylesheet" />
+    <link href="/frontend/static/assets/css/main.css" rel="stylesheet" />
     
 
     <!-- =======================================================
@@ -99,12 +54,12 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('resume') }}">Resume</a></li>
-            <li><a href="{{ url_for('services') }}">Services</a></li>
-            <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="/frontend/index.html" class="active">Home</a></li>
+            <li><a href="/frontend/about.html">About</a></li>
+            <li><a href="/frontend/resume.html">Resume</a></li>
+            <li><a href="/frontend/services.html">Services</a></li>
+            <li><a href="/frontend/portfolio.html">Portfolio</a></li>
+            <li><a href="/frontend/contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -169,7 +124,7 @@
               <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
                 <div class="image-wrapper">
                   <img
-                    src="{{ url_for('static', filename='assets/img/profile/cv_bild_.jpg') }}"
+                    src="/frontend/static/assets/img/profile/cv_bild_.jpg"
                     alt="Danny Yari"
                     class="img-fluid"
                   />
@@ -245,31 +200,17 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/typed.js/typed.umd.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="/frontend/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/frontend/static/assets/vendor/aos/aos.js"></script>
+    <script src="/frontend/static/assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="/frontend/static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/frontend/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/frontend/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/frontend/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/frontend/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/frontend/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
-
-    <!-- Vendor JS Files -->
-    <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/assets/vendor/aos/aos.js"></script>
-    <script src="../static/assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="../static/assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="../static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="../static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="../static/assets/js/main.js"></script>
+    <script src="/frontend/static/assets/js/main.js"></script>
     </body>
     </html>
