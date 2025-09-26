@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         console.log("About to send fetch request...");
 
-        const result = await fetch("/api/contact", {
+        const result = await fetch("https://python-flask-devops.netlify.app/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData)
