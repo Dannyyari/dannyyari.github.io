@@ -53,23 +53,6 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -86,93 +69,130 @@
   </header>
 
   <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section">
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium totam rem aperiam
+          </p>
+        </div>
+        <!-- End Section Title -->
+
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 align-items-center">
-            <div class="col-lg-6 order-2 order-lg-1">
-              <div class="hero-content">
-                <h1 data-aos="fade-up" data-aos-delay="200">
-                  Hello, I'm <span class="highlight">Danny Yari</span>
-                </h1>
-                <h2 data-aos="fade-up" data-aos-delay="300">
-                  Creative
-                  <span
-                    class="typed"
-                    data-typed-items="Java developer, Junior Google Cloud Engineer"
-                  ></span>
-                </h2>
-                <p data-aos="fade-up" data-aos-delay="400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div
-                  class="hero-actions"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <a href="portfolio.html" class="btn btn-primary"
-                    >View My Work</a
-                  >
-                  <a href="contact.html" class="btn btn-outline"
-                    >Get In Touch</a
-                  >
+          <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+              <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>Contact Info</h3>
+                <p>Feel free to contact me</p>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Our Location</h4>
+                    <p>Sundbyberg, Stockholm</p>
+                    <p>Sweden</p>
+                  </div>
                 </div>
-                <div
-                  class="social-links"
-                  data-aos="fade-up"
-                  data-aos-delay="600"
-                >
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-github"></i></a>
-                  <a href="#"><i class="bi bi-dribbble"></i></a>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Phone Number</h4>
+                    <p>+46 760 600 064</p>
+                  </div>
+                </div>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                  <div class="icon-box">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Private Email Address</h4>
+                    <p>Danny_yari@yahoo.com</p>
+                    <h4>Work Email Address</h4>
+                    <p>Danny.yari@yh.nackademin.se</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2">
-              <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
-                <div class="image-wrapper">
-                  <img
-                    src="/frontend/static/assets/img/profile/cv_bild_.jpg"
-                    alt="Danny Yari"
-                    class="img-fluid"
-                  />
-                  <div class="floating-elements">
-                    <div
-                      class="floating-card design"
-                      data-aos="fade-left"
-                      data-aos-delay="700"
-                    >
-                      <i class="bi bi-palette"></i>
-                      <span>Design</span>
+
+            <div class="col-lg-7">
+              <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                <h3>Get In Touch</h3>
+                <p>
+                  Please send a message and I will contact you as soon as
+                  possible!
+                </p>
+                <form
+                  id="contactForm"
+                  class="php-email-form"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required=""
+                      />
                     </div>
-                    <div
-                      class="floating-card code"
-                      data-aos="fade-right"
-                      data-aos-delay="800"
-                    >
-                      <i class="bi bi-code-slash"></i>
-                      <span>Code</span>
+
+                    <div class="col-md-6">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Your Email"
+                        required=""
+                      />
                     </div>
-                    <div
-                      class="floating-card creativity"
-                      data-aos="fade-up"
-                      data-aos-delay="900"
-                    >
-                      <i class="bi bi-lightbulb"></i>
-                      <span>Ideas</span>
+
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Subject"
+                        required=""
+                      />
+                    </div>
+
+                    <div class="col-12">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        rows="6"
+                        placeholder="Message"
+                        required=""
+                      ></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">
+                        Your message has been sent. Thank you!
+                      </div>
+                      <button type="submit" class="btn">Send Message</button>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
     </main>
 
   <footer id="footer" class="footer">
