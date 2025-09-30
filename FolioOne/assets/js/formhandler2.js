@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showError(msg) {
-    errorText.textContent = msg;
+    errorDiv.textContent = msg;
     errorDiv.style.display = "block";
     successDiv.style.display = "none";
   }
