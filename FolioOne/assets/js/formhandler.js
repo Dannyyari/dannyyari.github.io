@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       console.log("Form data being sent:", formData);
      try {
-      const response = await fetch("RAILWAYAPI_HÄR", {
+      const response = await fetch("backenddannysportfolio-production.up.railway.app", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
