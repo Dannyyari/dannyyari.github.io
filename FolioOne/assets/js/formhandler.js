@@ -5,12 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const successDiv = document.querySelector(".sent-message");
   const submitBtn = document.querySelector("button[type='submit']");
 
-  // Hide all messages initially
-  if (loadingDiv) loadingDiv.style.display = "none";
-  if (errorDiv) errorDiv.style.display = "none";
-  if (successDiv) successDiv.style.display = "none";
 
-  if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
@@ -23,66 +18,50 @@ document.addEventListener("DOMContentLoaded", () => {
         message: form.message.value
       };
       console.log("Form data being sent:", formData);
-      try {
-        console.log("About to send fetch request...");
+     try {
+      const response = await fetch("RAILWAYAPI_HÄR", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
 
-        const result = await fetch("https://python-flask-devops.netlify.app/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData)
-        });
-        console.log("Fetch completed, status:", result.status)
-        if (result.ok) {
-          showSuccess();
-          alert("Message sent to backend, thanks!");
-          form.reset();
-        } else {
-          alert("Something went wrong, please try again.");
-          console.log("ERROR: Form with ID 'contactForm' not found!");
-          showError("Something went wrong, please try again.");
-        }
-      } catch (err) {
-        console.error(err);
-        alert("Could not connect to server");
+      hideLoading(); // Glöm inte ta bort loading-indikatorn
+
+      if (response.ok) {
+        showSuccess();
+        alert("Message sent to backend, thanks!");
+        form.reset();
+      } else {
+        // Försök hämta ett felmeddelande från backend
+        const errorText = await response.text();
+        showError(errorText || "Something went wrong, please try again.");
       }
-    });
-  }
+    } catch (err) {
+      hideLoading();
+      console.error(err);
+      showError("Could not connect to server");
+    }
+  });
 
   function showLoading() {
-    hideAllMessages();
-    if (loadingDiv) loadingDiv.style.display = "block";
-    if (submitBtn) submitBtn.disabled = true;
+    loadingDiv.style.display = "block";
+    errorDiv.style.display = "none";
+    successDiv.style.display = "none";
+  }
+
+  function hideLoading() {
+    loadingDiv.style.display = "none";
+  }
+
+  function showError(msg) {
+    errorDiv.textContent = msg;
+    errorDiv.style.display = "block";
+    successDiv.style.display = "none";
   }
 
   function showSuccess() {
-    hideAllMessages();
-    if (successDiv) successDiv.style.display = "block";
-    if (submitBtn) submitBtn.disabled = false;
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      if (successDiv) successDiv.style.display = "none";
-    }, 5000);
+    successDiv.style.display = "block";
+    errorDiv.style.display = "none";
   }
-
-  function showError(message) {
-    hideAllMessages();
-    if (errorDiv) {
-      errorDiv.textContent = message;
-      errorDiv.style.display = "block";
-    }
-    if (submitBtn) submitBtn.disabled = false;
-    
-    // Hide error message after 5 seconds
-    setTimeout(() => {
-      if (errorDiv) errorDiv.style.display = "none";
-    }, 5000);
-  }
-
-  function hideAllMessages() {
-    if (loadingDiv) loadingDiv.style.display = "none";
-    if (errorDiv) errorDiv.style.display = "none";
-    if (successDiv) successDiv.style.display = "none";
-  }
-
+  
 });
