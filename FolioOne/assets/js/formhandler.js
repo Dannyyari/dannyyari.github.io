@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(formData)
       });
 
-      hideLoading(); // Glöm inte ta bort loading-indikatorn
+      hideLoading();
 
       if (response.ok) {
+        console.log("sending to backend was successful");
         showSuccess();
         alert("Message sent to backend, thanks!");
         form.reset();
       } else {
-        // Försök hämta ett felmeddelande från backend
         const errorText = await response.text();
         showError(errorText || "Something went wrong, please try again.");
       }
