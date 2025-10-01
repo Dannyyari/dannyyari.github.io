@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Form data being sent:", formData);
 
     try {
-      console.log("Sending to:", "https://backenddannysportfolio-production.up.railway.app/api/contact");
+      console.log("Sending to:", "https://backenddannysportfolio.onrender.com/api/contact");
       
       // KOPIERA DENNA EXAKTA RAD
-      const response = await fetch("https://backenddannysportfolio-production.up.railway.app/api/contact", {
+      const response = await fetch("https://backenddannysportfolio.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
