@@ -3,34 +3,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadingDiv = document.querySelector(".loading");
   const errorDiv = document.querySelector(".error-message");
   const successDiv = document.querySelector(".sent-message");
-  const submitBtn = document.querySelector("button[type='submit']");
 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    showLoading();
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
+    };
+    
+    console.log("Form data being sent:", formData);
 
-       showLoading();
-
-      const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        subject: form.subject.value,
-        message: form.message.value
-      };
-      console.log("Form data being sent:", formData);
-     try {
-      const response = await fetch("https://backenddannysportfolio-production.up.railway.app/api/contact", {
+    try {
+      console.log("Sending to:", "https://backenddannysportfolio.onrender.com/api/contact");
+      
+      const response = await fetch("https://backenddannysportfolio.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
       });
 
+      console.log("Response status:", response.status);
       hideLoading();
 
       if (response.ok) {
         console.log("sending to backend was successful");
         showSuccess();
-        alert("Message sent to backend, thanks!");
         form.reset();
       } else {
         const errorText = await response.text();
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (err) {
       hideLoading();
-      console.error(err);
+      console.error("Fetch error:", err);
       showError("Could not connect to server");
     }
   });
@@ -63,5 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
     successDiv.style.display = "block";
     errorDiv.style.display = "none";
   }
-  
 });
