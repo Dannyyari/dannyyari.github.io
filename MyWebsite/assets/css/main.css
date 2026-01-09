@@ -2855,11 +2855,11 @@ section,
 }
 
 h4 .development-list {
-    font-size: 0.85em; /* Gör texten 60% av rubrikens storlek */
+    font-size: 0.85em;
     colour: #666;
-    #font-weight: normal; /* Tar bort eventuell fetstil från rubriken */
+    #font-weight: normal;
     font-weight: 400;
-    margin-left: 5px;/* Tar bort eventuell fetstil från rubriken */
-    display: inline-block; /* Gör det lättare att justera marginaler om det behövs */
+    margin-left: 5px;
+    display: inline-block;
     vertical-align: middle;
 }
