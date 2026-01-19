@@ -2863,3 +2863,34 @@ h4 .development-list {
     display: inline-block;
     vertical-align: middle;
 }
+
+.vendor-title {
+    color: #4285F4; /* Google Blue */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cert-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cert-entry.planned {
+    color: #666;
+    font-style: italic;
+}
+
+.cert-date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+
+
+
+
+
+
